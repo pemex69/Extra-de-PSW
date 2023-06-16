@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicia Sesion</title>
+        <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="./CSS/style sheets.css">
+        <link rel="stylesheet" href="./CSS/style sheets.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="content">
+                    <div class="logo">
+                        <a href="#">Dr. Paws</a>
+                    </div>
+                    <ul class="menu-list">
+                        <div class="icon cancel-btn">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./pets.html">Registro de mascotas</a></li>
+                        <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
+                        <li><a href="./agenda.html">Citas</a></li>
+                        <li><a href="./contact.html">Contactanos</a></li>
+                    </ul>
+                    <div class="icon menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <br><br><br><br><br><br><br>
+        <main>
+            <div class="container">
+                <form method="post" action="saveClient" id="clients">
+                    <div class="form-group">
+                        <label for="clientName">Nombre</label>
+                        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientEmail">Correo</label>
+                        <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPass">Contrasenia</label>
+                        <input type="password" class="form-control" id="clientPass" name="clientPass"
+                               placeholder="Contrasenia">
+                    </div>
+                    <input type="submit" value="Registrarse"> <input type="reset" value="Limpiar">
+                </form>
+                <br>
+                <br>
+                <a href="getAllUsers.jsp">Consultar todos</a>
+            </div>
+
+
+        </main>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./JS/form validation.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
