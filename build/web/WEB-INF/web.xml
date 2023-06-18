@@ -12,6 +12,42 @@
         <servlet-name>deleteClient</servlet-name>
         <servlet-class>Servlet.deleteClient</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>getPetHistory</servlet-name>
+        <servlet-class>Servlet.getPetHistory</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GenerateLabOrder</servlet-name>
+        <servlet-class>Servlet.GenerateLabOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>saveConsultation</servlet-name>
+        <servlet-class>Servlet.saveConsultation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PetServlet</servlet-name>
+        <servlet-class>Servlet.PetServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VeterinarianServlet</servlet-name>
+        <servlet-class>Servlet.VeterinarianServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updatePet</servlet-name>
+        <servlet-class>Servlet.updatePet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>Servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ScheduleAppointmentServlet</servlet-name>
+        <servlet-class>Servlet.ScheduleAppointmentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>saveClient</servlet-name>
         <url-pattern>/saveClient</url-pattern>
@@ -23,6 +59,42 @@
     <servlet-mapping>
         <servlet-name>deleteClient</servlet-name>
         <url-pattern>/deleteClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getPetHistory</servlet-name>
+        <url-pattern>/getPetHistory</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GenerateLabOrder</servlet-name>
+        <url-pattern>/GenerateLabOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>saveConsultation</servlet-name>
+        <url-pattern>/saveConsultation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PetServlet</servlet-name>
+        <url-pattern>/PetServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VeterinarianServlet</servlet-name>
+        <url-pattern>/VeterinarianServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updatePet</servlet-name>
+        <url-pattern>/updatePet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ScheduleAppointmentServlet</servlet-name>
+        <url-pattern>/ScheduleAppointmentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

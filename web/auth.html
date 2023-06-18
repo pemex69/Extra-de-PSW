@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicia Sesion</title>
+        <title>Inicia Sesión</title>
         <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="preconnect" href="./CSS/style sheets.css">
@@ -24,10 +24,9 @@
                             <i class="fas fa-times"></i>
                         </div>
                         <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./pets.html">Registro de mascotas</a></li>
+                        <li><a href="./pets.jsp">Registro de mascotas</a></li>
                         <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
-                        <li><a href="./agenda.html">Citas</a></li>
-                        <li><a href="./contact.html">Contactanos</a></li>
+                        <li><a href="./agenda.jsp">Citas</a></li>
                     </ul>
                     <div class="icon menu-btn">
                         <i class="fas fa-bars"></i>
@@ -38,33 +37,31 @@
         <br><br><br><br><br><br><br>
         <main>
             <div class="container">
-                <form method="post" action="saveClient" id="clients">
+                <h2>Regístrate</h2>
+                <form id="registrationForm" method="post" action="saveClient">
                     <div class="form-group">
-                        <label for="clientName">Nombre</label>
-                        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Nombre">
+                        <label for="registerEmail">Nombre</label>
+                        <input type="text" class="form-control" id="registerEmail" name="clientName" placeholder="Correo">
                     </div>
                     <div class="form-group">
-                        <label for="clientEmail">Correo</label>
-                        <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+                        <label for="registerEmail">Correo</label>
+                        <input type="email" class="form-control" id="registerEmail" name="clientEmail" placeholder="Correo">
                     </div>
                     <div class="form-group">
-                        <label for="clientPass">Contrasenia</label>
-                        <input type="password" class="form-control" id="clientPass" name="clientPass"
-                               placeholder="Contrasenia">
+                        <label for="registerPass">Contraseña</label>
+                        <input type="password" class="form-control" id="registerPass" name="clientPass" placeholder="Contraseña">
                     </div>
-                    <input type="submit" value="Registrarse"> <input type="reset" value="Limpiar">
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
                 </form>
-                <br>
-                <br>
-                <a href="getAllUsers.jsp">Consultar todos</a>
+                <div id="registerMessageArea" style="display: none;"></div>
+                <!-- You dont have an account button -->
+                <div class="text-center">
+                    <p>¿Ya tienes una cuenta? <a href="./login.html">Inicia Sesión</a></p>
+                </div>
             </div>
 
-
         </main>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="./JS/form validation.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
-
 </html>

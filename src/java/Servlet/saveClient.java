@@ -36,33 +36,6 @@ public class saveClient extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
 
-            HttpSession clientSession = request.getSession(true);
-            String clientSessionId = clientSession.getId();
-            long sessionCreationTime = clientSession.getCreationTime();
-            long lastClientSessionAccessedTime = clientSession.getLastAccessedTime();
-
-            //'Cookie' [HashMap]
-            String atribute = "clientAccount.ss";
-            Integer account = (Integer) clientSession.getAttribute(atribute);
-            if (account == null) {
-                account = new Integer(1);
-            } else {
-                account = new Integer(account.intValue() + 1);
-            }
-
-            clientSession.setAttribute(atribute, account);
-
-            System.out.println("Session id: " + clientSessionId);
-            System.out.println("Creation date: " + new Date(sessionCreationTime).toString());
-            System.out.println("Last accessed Time: " + new Date(lastClientSessionAccessedTime).toString());
-
-            Enumeration sessionParams = clientSession.getAttributeNames();
-            while (sessionParams.hasMoreElements()) {
-                String params = (String) sessionParams.nextElement();
-                Object value = clientSession.getAttribute(params);
-                System.out.println("The parameter is: " + params + " and its value: " + value.toString());
-            }
-
             String clientName, clientEmail, clientPass;
 
             clientName = request.getParameter("clientName");
@@ -74,12 +47,6 @@ public class saveClient extends HttpServlet {
             cli.setClientName(clientName);
             cli.setClientEmail(clientEmail);
             cli.setClientPass(clientPass);
-            //Setting the client values in the session
-            clientSession.setAttribute("clientName", clientName);
-            clientSession.setAttribute("clientEmail", clientEmail);
-            clientSession.setAttribute("clientPass", clientPass);
-
-            
             
             System.out.println("Captured values from the form:");
             System.out.println("Name: " + clientName);
@@ -88,7 +55,7 @@ public class saveClient extends HttpServlet {
 
             int status = ClientActions.registerClient(cli);
             if (status > 0) {
-                response.sendRedirect("ClientRegistered.jsp");
+                response.sendRedirect("login.html");
             } else {
                 response.sendRedirect("error.jsp");
             }

@@ -6,6 +6,7 @@ package Controller;
 
 import Model.Client;
 import Model.DatabaseConnection;
+import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.sql.*;
 
@@ -14,6 +15,37 @@ import java.sql.*;
  * @author que
  */
 public class ClientActions {
+
+    public static Client loginClient(String clientEmail, String clientPass) {
+        Client client = null;
+        try {
+            Connection con = DatabaseConnection.getConnection();
+            String loginQuery = "SELECT * FROM Clients WHERE clientEmail = ? AND clientPass = ?";
+
+            PreparedStatement ps = con.prepareStatement(loginQuery);
+            ps.setString(1, clientEmail);
+            ps.setString(2, clientPass);
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                client = new Client();
+                client.setClientId(rs.getInt("clientId"));
+                client.setClientName(rs.getString("clientName"));
+                client.setClientEmail(rs.getString("clientEmail"));
+                client.setClientPass(rs.getString("clientPass"));
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println("Error during login: " + e.getMessage());
+        }
+        return client;
+    }
+
+    public static void logoutClient(HttpSession session) {
+        if (session != null) {
+            session.invalidate();
+        }
+    }
 
     public static int registerClient(Client cli) {
         int status = 0;
