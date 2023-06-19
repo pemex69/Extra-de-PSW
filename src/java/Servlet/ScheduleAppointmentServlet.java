@@ -77,7 +77,7 @@ public class ScheduleAppointmentServlet extends HttpServlet {
 
                 int status = AppointmentActions.scheduleAppointment(appointment);
                 if (status > 0) {
-                    response.sendRedirect("index.html"); // Redirige al usuario a la página de citas después de agendar la cita
+                    response.sendRedirect("appointments.jsp"); // Redirige al usuario a la página de citas después de agendar la cita
                 } else {
                     response.sendRedirect("error.jsp"); // Redirige al usuario a una página de error si no se pudo agendar la cita
                 }

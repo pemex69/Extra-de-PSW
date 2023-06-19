@@ -1,13 +1,13 @@
 package Model;
 
+/**
+ * Model class for LabOrder entity.
+ */
 public class LabOrder {
 
     private int orderId;
     private int petId;
     private String orderDetails;
-
-    public LabOrder() {
-    }
 
     public int getOrderId() {
         return orderId;

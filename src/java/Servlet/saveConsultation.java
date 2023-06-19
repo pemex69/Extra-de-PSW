@@ -3,52 +3,37 @@ package Servlet;
 import Controller.ConsultationActions;
 import Model.Consultation;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@WebServlet("/saveConsultation2")
 public class saveConsultation extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            String petId = request.getParameter("petId");
-            String veterinarian = request.getParameter("veterinarian");
-            String consultationDate = request.getParameter("consultationDate");
-            String consultationDetails = request.getParameter("consultationDetails");
-
-            Consultation consultation = new Consultation();
-            consultation.setPetId(Integer.parseInt(petId));
-            consultation.setVeterinarian(veterinarian);
-            consultation.setConsultationDate(consultationDate);
-            consultation.setConsultationDetails(consultationDetails);
-
-            int status = ConsultationActions.registerConsultation(consultation);
-            if (status > 0) {
-                response.sendRedirect("ConsultationSaved.jsp");
-            } else {
-                response.sendRedirect("error.jsp");
-            }
-        }
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
+        int vetId = Integer.parseInt(request.getParameter("vetId"));
+        int petId = Integer.parseInt(request.getParameter("petId"));
+        String consultationDate = request.getParameter("consultationDate");
+        String consultationNotes = request.getParameter("consultationNotes");
+        String consultationTreatment = request.getParameter("consultationTreatment");
 
-    @Override
-    public String getServletInfo() {
-        return "Short description";
+        Consultation consultation = new Consultation();
+        consultation.setVetId(vetId);
+        consultation.setPetId(petId);
+        consultation.setConsultationDate(consultationDate);
+        consultation.setConsultationNotes(consultationNotes);
+        consultation.setConsultationTreatment(consultationTreatment);
+
+        ConsultationActions consultationController = new ConsultationActions();
+        boolean success = consultationController.addConsultation(consultation);
+
+        if (success) {
+            response.sendRedirect("vetPetHistory.jsp?petId=" + petId);
+        } else {
+            response.sendRedirect("error.jsp");
+        }
     }
 }

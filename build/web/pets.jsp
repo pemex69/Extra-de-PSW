@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@page import="java.sql.*"%>
-<%@page import="Model.DatabaseConnection"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="Model.Pet" %>
+<%@ page import="java.sql.*"%>
+<%@ page import="Model.DatabaseConnection"%>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,7 +11,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agenda tÃº cita</title>
+        <title>Agenda tu cita</title>
         <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="preconnect" href="./CSS/style sheets.css">
@@ -71,7 +74,7 @@
                     <input type="hidden" id="clientId" name="clientId" value="<%= clientId %>">
                     <div class="form-group">
                         <label for="petName">Nombre de la mascota:</label>
-                        <input type="text" class="form-control" id="petName" name="petName" value="id? <%=clientId%>" required>
+                        <input type="text" class="form-control" id="petName" name="petName" value="Mascota de okmaguey" required>
                     </div>
                     <div class="form-group">
                         <label for="petSpecies">Especie:</label>
@@ -91,6 +94,9 @@
                     </div>
                     <input type="submit" class="btn btn-primary" value="Registrar mascota">
                 </form>
+                <center>
+                    <a href="allPets.jsp?clientId=<%=clientId %>"><h4>Consultar <strong>mis mascotas</strong> </h4></a>
+                </center>
             </div>
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

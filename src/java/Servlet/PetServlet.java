@@ -97,7 +97,7 @@ public class PetServlet extends HttpServlet {
 
         int status = PetActions.updatePet(pet);
         if (status > 0) {
-            response.sendRedirect("pets.jsp?clientId=" + clientId);
+            response.sendRedirect("allPets.jsp?clientId=" + clientId);
         } else {
             response.sendRedirect("error.jsp");
         }
@@ -110,7 +110,7 @@ public class PetServlet extends HttpServlet {
 
         int status = PetActions.deletePet(petId);
         if (status > 0) {
-            response.sendRedirect("pets.jsp?clientId=" + clientId);
+            response.sendRedirect("allPets.jsp?clientId=" + clientId);
         } else {
             response.sendRedirect("error.jsp");
         }

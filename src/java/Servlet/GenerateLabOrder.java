@@ -2,27 +2,61 @@ package Servlet;
 
 import Controller.LabActions;
 import Model.LabOrder;
+import java.io.IOException;
+import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
+/**
+ * Servlet implementation class GenerateLabOrder
+ */
 public class GenerateLabOrder extends HttpServlet {
 
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public GenerateLabOrder() {
+        super();
+    }
+
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Handle GET request if needed
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String petId = request.getParameter("petId");
-        String orderDetails = request.getParameter("orderDetails");
+        response.setContentType("text/html;charset=UTF-8");
+        try ( PrintWriter out = response.getWriter()) {
+            // Get parameters from the form
+            int petId = Integer.parseInt(request.getParameter("petId"));
+            String orderDetails = request.getParameter("orderDetails");
 
-        LabOrder labOrder = new LabOrder();
-        labOrder.setPetId(Integer.parseInt(petId));
-        labOrder.setOrderDetails(orderDetails);
+            // Create a LabOrder object
+            LabOrder labOrder = new LabOrder();
+            labOrder.setPetId(petId);
+            labOrder.setOrderDetails(orderDetails);
 
-        int status = LabActions.generateLabOrder(labOrder);
-        if (status > 0) {
-            response.sendRedirect("LabOrderGenerated.jsp");
-        } else {
-            response.sendRedirect("error.jsp");
+            // Save the LabOrder
+            int status = LabActions.generateLabOrder(labOrder);
+
+            if (status > 0) {
+                // Success: Redirect to a success page
+                response.sendRedirect("vetPetHistory.jsp?petId=" + petId);
+            } else {
+                // Error: Redirect to an error page
+                response.sendRedirect("LabOrderError.jsp");
+            }
         }
     }
 }

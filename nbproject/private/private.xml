@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Servlet/getPetHistory.java</file>
-            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Controller/PetActions.java</file>
-            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Model/LabOrder.java</file>
-            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Controller/LabActions.java</file>
-            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Model/PetHistory.java</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Controller/VeterinarianActions.java</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/web/vetHomePage.jsp</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Servlet/saveConsultation.java</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/web/WEB-INF/web.xml</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/nbproject/build-impl.xml</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Controller/ConsultationActions.java</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Model/Consultation.java</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/src/java/Servlet/VetLogin.java</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/web/vetPetHistory.jsp</file>
+            <file>file:/home/que/Downloads/sus/EXTRA%20PSW/VeterinariaExtraordinaria/web/login.html</file>
         </group>
     </open-files>
 </project-private>

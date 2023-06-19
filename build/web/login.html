@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicia Sesión</title>
-    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="preconnect" href="./CSS/style sheets.css">
-    <link rel="stylesheet" href="./CSS/style sheets.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicia Sesión</title>
+        <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="./CSS/style sheets.css">
+        <link rel="stylesheet" href="./CSS/style sheets.css">
+    </head>
 
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="content">
-                <div class="logo">
-                    <a href="#">Dr. Paws</a>
-                </div>
-                <ul class="menu-list">
-                    <div class="icon cancel-btn">
-                        <i class="fas fa-times"></i>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="content">
+                    <div class="logo">
+                        <a href="#">Dr. Paws</a>
                     </div>
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./pets.jsp">Registro de mascotas</a></li>
-                    <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
-                    <li><a href="./agenda.jsp">Citas</a></li>
-                </ul>
-                <div class="icon menu-btn">
-                    <i class="fas fa-bars"></i>
+                    <ul class="menu-list">
+                        <div class="icon cancel-btn">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./pets.jsp">Registro de mascotas</a></li>
+                        <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
+                        <li><a href="./agenda.jsp">Citas</a></li>
+                    </ul>
+                    <div class="icon menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <br>
-    <main>
-        <div class="container">
-            <h2>Inicia Sesión</h2>
-            <form id="loginForm" method="post" action="LoginServlet">
-                <div class="form-group">
-                    <label for="clientEmail">Correo</label>
-                    <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+            </nav>
+        </header>
+        <br><br><br><br>
+        <main>
+            <div class="container">
+                <h2>Inicia Sesión</h2>
+                <form id="loginForm" method="post" action="LoginServlet">
+                    <div class="form-group">
+                        <label for="clientEmail">Correo</label>
+                        <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPass">Contraseña</label>
+                        <input type="password" class="form-control" id="clientPass" name="clientPass"
+                               placeholder="Contraseña">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        </div>
+                    </div>
+                </form>
+                <br><br>
+                <form method="post" action="VetLogin">
+                    <div class="form-group">
+                        <label for="clientEmail">Correo</label>
+                        <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPass">Contraseña</label>
+                        <input type="password" class="form-control" id="clientPass" name="clientPass"
+                               placeholder="Contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-danger">Veterinario</button>
+                </form>
+                <div id="messageArea" style="display: none;"></div>
+                <!-- You dont have an account button -->
+                <div class="col-sm-6">
+                    <p>¿No tienes una cuenta? <a href="./auth.html">Regístrate</a></p>
                 </div>
-                <div class="form-group">
-                    <label for="clientPass">Contraseña</label>
-                    <input type="password" class="form-control" id="clientPass" name="clientPass"
-                        placeholder="Contraseña">
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-            </form>
-            <div id="messageArea" style="display: none;"></div>
-            <!-- You dont have an account button -->
-            <div class="text-center">
-                <p>¿No tienes una cuenta? <a href="./auth.html">Regístrate</a></p>
-            </div>
-            <!---Logout-->
-            <form method="post" action="LogoutServlet">
-                <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
-            </form>
-        </div>
-    </main>
-    <footer>
-        <p>Dr Paws® 2023</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</body>
+                <!---Logout-->
+                <form method="post" action="LogoutServlet">
+                    <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
+                </form>
+        </main>
+        <footer>
+            <p>Dr Paws® 2023</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
 
 </html>

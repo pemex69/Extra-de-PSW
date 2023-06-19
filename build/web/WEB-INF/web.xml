@@ -48,6 +48,10 @@
         <servlet-name>ScheduleAppointmentServlet</servlet-name>
         <servlet-class>Servlet.ScheduleAppointmentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VetLogin</servlet-name>
+        <servlet-class>Servlet.VetLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>saveClient</servlet-name>
         <url-pattern>/saveClient</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>ScheduleAppointmentServlet</servlet-name>
         <url-pattern>/ScheduleAppointmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VetLogin</servlet-name>
+        <url-pattern>/VetLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

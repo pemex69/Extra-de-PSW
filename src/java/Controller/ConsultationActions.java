@@ -1,43 +1,45 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controller;
 
+import Model.Consultation;
+import Model.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import Model.DatabaseConnection;
-import Model.Consultation;
 
 public class ConsultationActions {
 
-    // ...
-    public static int registerConsultation(Consultation consultation) {
-        int status = 0;
+    public boolean addConsultation(Consultation consultation) {
         try {
-            Connection con = DatabaseConnection.getConnection();
-            String registerConsultationQuery = "INSERT INTO Consultations(petId, veterinarian, consultationDate, consultationDetails)"
-                    + " VALUES (?, ?, ?, ?)";
+            Connection connection = DatabaseConnection.getConnection();
+            String query = "INSERT INTO Consultations (vetId, petId, consultationDate, consultationNotes, consultationTreatment) "
+                    + "VALUES (?, ?, ?, ?, ?)";
 
-            PreparedStatement ps = con.prepareStatement(registerConsultationQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, consultation.getVetId());
+            preparedStatement.setInt(2, consultation.getPetId());
+            preparedStatement.setString(3, consultation.getConsultationDate());
+            preparedStatement.setString(4, consultation.getConsultationNotes());
+            preparedStatement.setString(5, consultation.getConsultationTreatment());
 
-            ps.setInt(1, consultation.getPetId());
-            ps.setString(2, consultation.getVeterinarian());
-            ps.setString(3, consultation.getConsultationDate());
-            ps.setString(4, consultation.getConsultationDetails());
+            int rowsInserted = preparedStatement.executeUpdate();
+            preparedStatement.close();
 
-            status = ps.executeUpdate();
+            String petHistoryInsert = "INSERT INTO PetHistory (petId, consultationDate, consultationNotes, consultationTreatment) "
+                    + "VALUES (?, ?, ?, ?)";
+            PreparedStatement ps = connection.prepareStatement(query);
+            preparedStatement.setInt(1, consultation.getPetId());
+            preparedStatement.setString(2, consultation.getConsultationDate());
+            preparedStatement.setString(3, consultation.getConsultationNotes());
+            preparedStatement.setString(4, consultation.getConsultationTreatment());
+            int useless = ps.executeUpdate();
+            ps.close();
+            
+            connection.close();
 
-            con.close();
-
-        } catch (Exception err) {
-            System.out.println("Error creating consultation: " + err.getMessage());
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
-        return status;
     }
-
-    // ...
 }

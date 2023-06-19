@@ -107,7 +107,7 @@ public class PetActions {
         return pet;
     }
 
-    public static ArrayList<PetHistory> getPetHistoryById(int petId) {
+    public static ArrayList<PetHistory> getPetHistoryByPetId(int petId) {
         ArrayList<PetHistory> petHistoryList = new ArrayList<>();
 
         Connection connection = null;
@@ -151,4 +151,37 @@ public class PetActions {
         }
         return petHistoryList;
     }
+
+    public static ArrayList<Pet> getPetsByClientId(int clientId) {
+        ArrayList<Pet> pets = new ArrayList<>();
+
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            String query = "SELECT * FROM Pets WHERE clientId=?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, clientId);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Pet pet = new Pet();
+                pet.setPetId(rs.getInt("petId"));
+                pet.setPetName(rs.getString("petName"));
+                pet.setPetSpecies(rs.getString("petSpecies"));
+                pet.setPetRace(rs.getString("petRace"));
+                pet.setPetWeight(rs.getFloat("petWeight"));
+                pet.setPetHealthState(rs.getString("petHealthState"));
+                pet.setClientId(rs.getInt("clientId"));
+
+                pets.add(pet);
+            }
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return pets;
+    }
+
 }

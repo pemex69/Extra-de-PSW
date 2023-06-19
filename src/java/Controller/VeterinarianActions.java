@@ -11,6 +11,28 @@ import java.util.List;
 
 public class VeterinarianActions {
 
+    public static int loginVeterinarian(Veterinarian vet) {
+        int vetId = 0;
+        try {
+            Connection con = DatabaseConnection.getConnection();
+            String loginQuery = "SELECT vetId FROM Vets WHERE vetEmail = ? AND vetPass = ?";
+
+            PreparedStatement ps = con.prepareStatement(loginQuery);
+            ps.setString(1, vet.getVetEmail());
+            ps.setString(2, vet.getVetPass());
+
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                vetId = rs.getInt("vetId");
+            }
+
+            con.close();
+        } catch (Exception err) {
+            System.out.println("Error during veterinarian login: " + err.getMessage());
+        }
+        return vetId;
+    }
+
     public static int registerVeterinarian(Veterinarian veterinarian) {
         int status = 0;
         try {

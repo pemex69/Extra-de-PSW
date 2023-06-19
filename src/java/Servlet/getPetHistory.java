@@ -18,7 +18,7 @@ public class getPetHistory extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             int petId = Integer.parseInt(request.getParameter("petId"));
 
-            ArrayList<PetHistory> petHistory = PetActions.getPetHistoryById(petId);
+            ArrayList<PetHistory> petHistory = PetActions.getPetHistoryByPetId(petId);
 
             StringBuilder json = new StringBuilder();
             json.append("[");
