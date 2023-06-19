@@ -80,6 +80,40 @@ public class PetActions {
         return status;
     }
 
+    public static int deleteAppointmentsByPetId(int petId) {
+        int status = 0;
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            String query = "DELETE FROM Appointments WHERE petId=?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, petId);
+
+            status = pstmt.executeUpdate();
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return status;
+    }
+
+    public static int deletePetHistoryByPetId(int petId) {
+        int status = 0;
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            String query = "DELETE FROM PetHistory WHERE petId=?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, petId);
+
+            status = pstmt.executeUpdate();
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return status;
+    }
+
     public static Pet getPetById(int petId) {
         Pet pet = new Pet();
         try {

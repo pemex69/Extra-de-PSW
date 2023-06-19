@@ -11,17 +11,36 @@
         <title>Pet History</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     </head>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Dr. Paws</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pets.jsp">Registro de mascotas</a></li>
+                <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
+                <li><a href="./agenda.jsp">Citas</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
     <body>
         <div class="container">
-            <h1 class="mt-4 mb-4">Pet History</h1>
+            <h1 class="mt-4 mb-4">Historial de la mascota</h1>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
                         <th>ID</th>
-                        <th>Date</th>
-                        <th>Consultation Notes</th>
-                        <th>Treatment</th>
-                        <th>Lab History</th>
+                        <th>Fecha</th>
+                        <th>Notas de consulta</th>
+                        <th>Tratamiento</th>
+                        <th>Historial de laboratorio</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,13 +48,17 @@
                         int petId = Integer.parseInt(request.getParameter("petId"));
                         ArrayList<PetHistory> petHistoryList = PetActions.getPetHistoryByPetId(petId);
                         for (PetHistory petHistory : petHistoryList) {
+                        String nn = petHistory.getPetLabHistory();
+                        if (nn == null) {
+                            nn = "N/A";
+                        }
                     %>
                     <tr>
                         <td><%= petHistory.getHistoryId() %></td>
                         <td><%= petHistory.getConsultationDate() %></td>
                         <td><%= petHistory.getConsultationNotes() %></td>
                         <td><%= petHistory.getConsultationTreatment() %></td>
-                        <td><%= petHistory.getPetLabHistory() %></td>
+                        <td><%= nn %></td>
                     </tr>
                     <% } %>
                 </tbody>
@@ -44,10 +67,6 @@
 String clientEmail = (String) session.getAttribute("clientEmail");
 String clientId = "";
 try {
-// Aquí debes realizar la conexión a la base de datos y ejecutar la consulta para obtener el ID del cliente
-// Puedes utilizar JDBC para conectarte a la base de datos y ejecutar la consulta
-
-// Ejemplo de conexión y consulta utilizando JDBC
 Connection con = DatabaseConnection.getConnection();
 String getclientEmailQuery = "SELECT clientId FROM Clients WHERE clientEmail = ?";
 PreparedStatement ps = con.prepareStatement(getclientEmailQuery);

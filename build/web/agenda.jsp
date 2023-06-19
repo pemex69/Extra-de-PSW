@@ -64,7 +64,7 @@
                 <form method="post" action="ScheduleAppointmentServlet">
                     <input type="hidden" name="clientId" value="<%=clientId%>">
                     <label for="start">Nombre de tu mascota</label>
-                    <input type="text" id="other" name="petName" value="lmfao" min="2023-01-01" max="2023-12-31">
+                    <input type="text" id="other" name="petName" value="" min="2023-01-01" max="2023-12-31">
                     <br><br>
                     <label for="start">Día de la cita:</label>
                     <input type="date" id="start" name="appointmentDate" value="2023-06-19" min="2023-01-01" max="2023-12-31">
@@ -82,6 +82,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./JS/agenda.js"></script>
     </body>
 
 </html>

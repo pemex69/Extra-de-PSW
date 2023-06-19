@@ -39,8 +39,7 @@ public class ScheduleAppointmentServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try {
-
-            HttpSession session = request.getSession(false); // Pass false to getSession() to prevent creating a new session if it doesn't exist
+            HttpSession session = request.getSession(false);
             String client = null;
 
             if (session != null) {
@@ -48,7 +47,7 @@ public class ScheduleAppointmentServlet extends HttpServlet {
             }
 
             if (client == null) {
-                response.sendRedirect("login.html"); // Redirige al usuario a la página de inicio de sesión si no hay sesión activa
+                response.sendRedirect("login.html");
             } else {
                 String petName = request.getParameter("petName");
                 String appointmentDateStr = request.getParameter("appointmentDate");
@@ -56,7 +55,7 @@ public class ScheduleAppointmentServlet extends HttpServlet {
                 String appointmentNotes = request.getParameter("appointmentNotes");
                 int clientId = Integer.parseInt(request.getParameter("clientId"));
 
-                int petId;
+                int petId = 0;
 
                 Connection con = DatabaseConnection.getConnection();
                 String getPetIdByClientIdAndPetNameQuery = "SELECT petId FROM Pets WHERE clientId = ? AND petName = ?";
@@ -64,22 +63,25 @@ public class ScheduleAppointmentServlet extends HttpServlet {
                 ps.setInt(1, clientId);
                 ps.setString(2, petName);
                 ResultSet rs = ps.executeQuery();
-                petId = 0;
                 if (rs.next()) {
                     petId = rs.getInt("petId");
                 }
 
-                Appointment appointment = new Appointment();
-                appointment.setClientId(clientId);
-                appointment.setPetId(petId);
-                appointment.setAppointmentDate(appointmentDate);
-                appointment.setAppointmentNotes(appointmentNotes);
+                if (petId > 0) {
+                    Appointment appointment = new Appointment();
+                    appointment.setClientId(clientId);
+                    appointment.setPetId(petId);
+                    appointment.setAppointmentDate(appointmentDate);
+                    appointment.setAppointmentNotes(appointmentNotes);
 
-                int status = AppointmentActions.scheduleAppointment(appointment);
-                if (status > 0) {
-                    response.sendRedirect("appointments.jsp"); // Redirige al usuario a la página de citas después de agendar la cita
+                    int status = AppointmentActions.scheduleAppointment(appointment);
+                    if (status > 0) {
+                        response.sendRedirect("appointments.jsp");
+                    } else {
+                        response.sendRedirect("error.jsp");
+                    }
                 } else {
-                    response.sendRedirect("error.jsp"); // Redirige al usuario a una página de error si no se pudo agendar la cita
+                    response.sendRedirect("indvalid.jsp"); // Redirect to error page if the petId is invalid
                 }
             }
         } catch (Exception ex) {

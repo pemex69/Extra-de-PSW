@@ -40,7 +40,7 @@
         <br><br><br><br>
         <main>
             <div class="container">
-                <a href="./index.html"><h1>Cita registrad <strong>Volver a inicio</strong> </h1></a>
+                <a href="./index.html"><h1>Cita registrada <strong>Volver a inicio</strong> </h1></a>
             </div>
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

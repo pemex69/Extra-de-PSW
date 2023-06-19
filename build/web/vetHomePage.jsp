@@ -12,18 +12,37 @@
         <title>Veterinarian Homepage</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Dr. Paws</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pets.jsp">Registro de mascotas</a></li>
+                <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
+                <li><a href="./agenda.jsp">Citas</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
     <body>
         <div class="container">
-            <h1>Welcome, Veterinarian!</h1>
-            <h2>Upcoming Appointments</h2>
+            <h1>Hola Veterinario</h1>
+            <h2>Estas son todas tus citas</h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Pet Name</th>
-                        <th>Owner Name</th>
-                        <th>Notes</th>
-                        <th>Actions</th>
+                        <th>Fecha</th>
+                        <th>Mascota</th>
+                        <th>Dueño</th>
+                        <th>Razon de la cita</th>
+                        <th><strong>Accion</strong></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,7 +69,7 @@
                         <td><%= petName %></td>
                         <td><%= clientName %></td>
                         <td><%= appointmentNotes %></td>
-                        <td><a href="vetPetHistory.jsp?petId=<%= petId %>">View Medical History</a></td>
+                        <td><a href="vetPetHistory.jsp?petId=<%= petId %>">Ver historial medcico</a></td>
                     </tr>
                     <% 
                         }
@@ -61,16 +80,16 @@
                     %>
                 </tbody>
             </table>
-
-            <h2>All Pets</h2>
+            <br><br>
+            <h2>Todas las mascotas</h2>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Pet ID</th>
-                        <th>Pet Name</th>
-                        <th>Owner Name</th>
-                        <th>Species</th>
-                        <th>History</th>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Dueño</th>
+                        <th>Especie</th>
+                        <th>Historial</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,7 +113,7 @@
                         <td><%= petName %></td>
                         <td><%= ownerName %></td>
                         <td><%= species %></td>
-                        <td><a href="vetPetHistory.jsp?petId=<%= petId %>">View Medical History</a></td>
+                        <td><a href="vetPetHistory.jsp?petId=<%= petId %>">Ver historial medico</a></td>
 
                     </tr>
                     <% 
@@ -106,12 +125,12 @@
                     %>
                 </tbody>
             </table>
-            <br> <br> <br> <br>
+            <br><br>
 
-            <h2>Add New Consultation</h2>
+            <h2>Ya lo atendiste? (consultas)</h2>
             <form action="saveConsultation" method="post">
                 <div class="mb-3">
-                    <label for="petId" class="form-label">Pet ID:</label>
+                    <label for="petId" class="form-label">ID:</label>
                     <select class="form-control" id="petId" name="petId">
                         <% 
                         try {
@@ -134,7 +153,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="vetId" class="form-label">Veterinarian:</label>
+                    <label for="vetId" class="form-label">Quien atendio?</label>
                     <select class="form-control" id="vetId" name="vetId">
                         <% 
                         try {
@@ -158,21 +177,23 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="consultationDate" class="form-label">Consultation Date:</label>
+                    <label for="consultationDate" class="form-label">Fecha de la consulta</label>
                     <input type="date" class="form-control" id="consultationDate" name="consultationDate" required>
                 </div>
                 <div class="mb-3">
-                    <label for="consultationNotes" class="form-label">Consultation Notes:</label>
+                    <label for="consultationNotes" class="form-label">Notas:</label>
                     <textarea class="form-control" id="consultationNotes" name="consultationNotes" rows="3" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="consultationTreatment" class="form-label">Consultation Treatment:</label>
+                    <label for="consultationTreatment" class="form-label">Tratamiento recetado:</label>
                     <textarea class="form-control" id="consultationTreatment" name="consultationTreatment" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Add Consultation</button>
+                <button type="submit" class="btn btn-primary">Agrega la consulta</button>
             </form>
-
+            <br>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./JS/consultation.js"></script>
     </body>
 </html>

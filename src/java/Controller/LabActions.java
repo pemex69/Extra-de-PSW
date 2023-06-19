@@ -2,6 +2,7 @@ package Controller;
 
 import Model.DatabaseConnection;
 import Model.LabOrder;
+import Model.PetHistory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -10,7 +11,7 @@ import java.sql.PreparedStatement;
  */
 public class LabActions {
 
-    public static int generateLabOrder(LabOrder labOrder) {
+    public static int generateLabOrder(LabOrder labOrder, PetHistory ph) {
         int status = 0;
         try {
             Connection con = DatabaseConnection.getConnection();
@@ -27,8 +28,8 @@ public class LabActions {
                     + " consultationTreatment, petLabHistory) VALUES (?, NOW(), ?, ?, ?)";
             PreparedStatement prepared = con.prepareStatement(insertLabPetHistoryQuery);
             prepared.setInt(1, labOrder.getPetId());
-            prepared.setString(2, "Orden de laboratorio por veterinario");
-            prepared.setString(3, "N/A");
+            prepared.setString(2, ph.getConsultationNotes());
+            prepared.setString(3, ph.getConsultationTreatment());
             prepared.setString(4, labOrder.getOrderDetails());
 
             int useless = prepared.executeUpdate();

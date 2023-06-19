@@ -18,6 +18,25 @@
         <link rel="preconnect" href="./CSS/style sheets.css">
         <link rel="stylesheet" href="./CSS/style sheets.css">
     </head>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Dr. Paws</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pets.jsp">Registro de mascotas</a></li>
+                <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
+                <li><a href="./agenda.jsp">Citas</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
     <body>
         <h1>Edita el cliente</h1>
         <br>

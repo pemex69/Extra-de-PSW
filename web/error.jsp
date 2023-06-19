@@ -16,7 +16,8 @@
 
         <body>
             <div class="container">
-                <h1>Ojalá no salga esto el 19 de Mayo a las 13:30 hrs.</h1>
+                <h1>ERROR. <a href="./index.html"><strong>Regresa</strong></a></h1>
+                <h6>Ojalá no salga esto el 19 de Mayo a las 13:30 .</h6>
                 <br>
                 <img src="https://media.tenor.com/R1KctPuHA8sAAAAd/miedo-perro.gif">
             </div>

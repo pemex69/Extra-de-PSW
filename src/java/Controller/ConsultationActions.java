@@ -26,11 +26,11 @@ public class ConsultationActions {
 
             String petHistoryInsert = "INSERT INTO PetHistory (petId, consultationDate, consultationNotes, consultationTreatment) "
                     + "VALUES (?, ?, ?, ?)";
-            PreparedStatement ps = connection.prepareStatement(query);
-            preparedStatement.setInt(1, consultation.getPetId());
-            preparedStatement.setString(2, consultation.getConsultationDate());
-            preparedStatement.setString(3, consultation.getConsultationNotes());
-            preparedStatement.setString(4, consultation.getConsultationTreatment());
+            PreparedStatement ps = connection.prepareStatement(petHistoryInsert);
+            ps.setInt(1, consultation.getPetId());
+            ps.setString(2, consultation.getConsultationDate());
+            ps.setString(3, consultation.getConsultationNotes());
+            ps.setString(4, consultation.getConsultationTreatment());
             int useless = ps.executeUpdate();
             ps.close();
             

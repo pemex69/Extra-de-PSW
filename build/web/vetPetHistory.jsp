@@ -12,17 +12,36 @@
         <title>Pet Medical History</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Dr. Paws</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pets.jsp">Registro de mascotas</a></li>
+                <li><a href="./auth.html">Registrate/Inicia Sesión</a></li>
+                <li><a href="./agenda.jsp">Citas</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
     <body>
         <div class="container">
-            <h1>Pet Medical History</h1>
+            <h1>Historial medico de la mascota</h1>
             <table class="table">
                 <thead>
                     <tr>
                         <th>petId</th>
-                        <th>Date</th>
-                        <th>Notes</th>
-                        <th>Treatment</th>
-                        <th>Lab</th>
+                        <th>Fecha</th>
+                        <th>Notas</th>
+                        <th>Tratamiento</th>
+                        <th>Laboratorio</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +62,7 @@
                             String consultationTreatment = rs.getString("consultationTreatment");
                             String petLabHistory = rs.getString("petLabHistory");
                             if (petLabHistory == null) {
-                                petLabHistory = "nada que mostrar . . .";
+                                petLabHistory = "N/A";
                             }
                     %>
                     <tr>

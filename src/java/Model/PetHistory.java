@@ -19,6 +19,10 @@ public class PetHistory {
         this.petLabHistory = petLabHistory;
     }
 
+    public PetHistory() {
+        //
+    }
+
     public int getHistoryId() {
         return historyId;
     }
@@ -42,4 +46,29 @@ public class PetHistory {
     public String getPetLabHistory() {
         return petLabHistory;
     }
+
+    public void setHistoryId(int historyId) {
+        this.historyId = historyId;
+    }
+
+    public void setPetId(int petId) {
+        this.petId = petId;
+    }
+
+    public void setConsultationDate(String consultationDate) {
+        this.consultationDate = consultationDate;
+    }
+
+    public void setConsultationNotes(String consultationNotes) {
+        this.consultationNotes = consultationNotes;
+    }
+
+    public void setConsultationTreatment(String consultationTreatment) {
+        this.consultationTreatment = consultationTreatment;
+    }
+
+    public void setPetLabHistory(String petLabHistory) {
+        this.petLabHistory = petLabHistory;
+    }
+    
 }

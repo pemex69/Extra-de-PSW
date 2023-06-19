@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.*;
 
 public class AppointmentActions {
 
@@ -29,6 +30,57 @@ public class AppointmentActions {
             con.close();
         } catch (Exception e) {
             System.out.println("Error scheduling appointment: " + e.getMessage());
+        }
+        return status;
+    }
+
+    public static int deleteAppointmentsByPetId(int petId) {
+        int status = 0;
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            String query = "DELETE FROM Appointments WHERE petId=?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, petId);
+
+            status = pstmt.executeUpdate();
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return status;
+    }
+
+    public static int deleteConsultationsByPetId(int petId) {
+        int status = 0;
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            String query = "DELETE FROM Consultations WHERE petId=?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, petId);
+
+            status = pstmt.executeUpdate();
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return status;
+    }
+
+    public static int deleteLabOrdersByPetId(int petId) {
+        int status = 0;
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            String query = "DELETE FROM LabOrders WHERE petId=?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, petId);
+
+            status = pstmt.executeUpdate();
+
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return status;
     }

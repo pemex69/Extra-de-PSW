@@ -53,10 +53,6 @@
                     String clientEmail = (String) session.getAttribute("clientEmail");
                     String clientId = "";
                     try {
-                        // Aquí debes realizar la conexión a la base de datos y ejecutar la consulta para obtener el ID del cliente
-                        // Puedes utilizar JDBC para conectarte a la base de datos y ejecutar la consulta
-
-                        // Ejemplo de conexión y consulta utilizando JDBC
                         Connection con = DatabaseConnection.getConnection();
                         String getclientEmailQuery = "SELECT clientId FROM Clients WHERE clientEmail = ?";
                         PreparedStatement ps = con.prepareStatement(getclientEmailQuery);
@@ -74,7 +70,7 @@
                     <input type="hidden" id="clientId" name="clientId" value="<%= clientId %>">
                     <div class="form-group">
                         <label for="petName">Nombre de la mascota:</label>
-                        <input type="text" class="form-control" id="petName" name="petName" value="Mascota de okmaguey" required>
+                        <input type="text" class="form-control" id="petName" name="petName" value="Mascota de <%= clientName%>" required>
                     </div>
                     <div class="form-group">
                         <label for="petSpecies">Especie:</label>
@@ -102,6 +98,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./JS/pets.js"></script>
     </body>
 
 </html>

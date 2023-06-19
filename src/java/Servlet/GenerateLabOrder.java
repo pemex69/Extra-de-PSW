@@ -2,6 +2,7 @@ package Servlet;
 
 import Controller.LabActions;
 import Model.LabOrder;
+import Model.PetHistory;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -42,13 +43,22 @@ public class GenerateLabOrder extends HttpServlet {
             int petId = Integer.parseInt(request.getParameter("petId"));
             String orderDetails = request.getParameter("orderDetails");
 
+            String consultationNotes = request.getParameter("consultationNotes");
+            String consultationTreatment = request.getParameter("consultationTreatment");
+
+            //insert the pethistory thingy . . .
+            
+            PetHistory ph = new PetHistory();
+            ph.setConsultationNotes(consultationNotes);
+            ph.setConsultationTreatment(consultationTreatment);
+            
             // Create a LabOrder object
             LabOrder labOrder = new LabOrder();
             labOrder.setPetId(petId);
             labOrder.setOrderDetails(orderDetails);
 
             // Save the LabOrder
-            int status = LabActions.generateLabOrder(labOrder);
+            int status = LabActions.generateLabOrder(labOrder, ph);
 
             if (status > 0) {
                 // Success: Redirect to a success page

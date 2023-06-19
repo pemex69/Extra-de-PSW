@@ -50,39 +50,45 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                            <button type="submit" class="btn btn-primary" id="loginbtn">Iniciar Sesión</button>
                         </div>
                     </div>
                 </form>
                 <br><br>
-                <form method="post" action="VetLogin">
+                <h2>Veterinarios</h2>
+                <form method="post" action="VetLogin" id="vetLoginForm">
                     <div class="form-group">
                         <label for="clientEmail">Correo</label>
-                        <input type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+                        <input type="email" class="form-control" id="vetEmail" name="clientEmail" placeholder="Correo">
                     </div>
                     <div class="form-group">
                         <label for="clientPass">Contraseña</label>
-                        <input type="password" class="form-control" id="clientPass" name="clientPass"
+                        <input type="password" class="form-control" id="vetPass" name="clientPass"
                                placeholder="Contraseña">
                     </div>
-                    <button type="submit" class="btn btn-danger">Veterinario</button>
+                    <button type="submit" class="btn btn-danger" id="vetloginbtn">Veterinario</button>
                 </form>
                 <div id="messageArea" style="display: none;"></div>
-                <!-- You dont have an account button -->
-                <div class="col-sm-6">
-                    <p>¿No tienes una cuenta? <a href="./auth.html">Regístrate</a></p>
-                </div>
-                <!---Logout-->
-                <form method="post" action="LogoutServlet">
-                    <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
-                </form>
+                <br>
+                <center>
+                    <form method="post" action="LogoutServlet">
+                        <button type="submit" class="btn btn-primary">Cerrar Sesión</button>
+                    </form>
+                    <br>
+                    <div class="col-sm-6">
+                        <p>¿No tienes una cuenta? <a href="./auth.html">Regístrate</a></p>
+                    </div>
+                </center>
         </main>
         <footer>
-            <p>Dr Paws® 2023</p>
+            <center>
+                <p>Dr Paws® 2023</p>
+            </center>
         </footer>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./JS/login.js"></script>
     </body>
 
 </html>

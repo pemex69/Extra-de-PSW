@@ -41,7 +41,7 @@
                 <form id="registrationForm" method="post" action="saveClient">
                     <div class="form-group">
                         <label for="registerEmail">Nombre</label>
-                        <input type="text" class="form-control" id="registerEmail" name="clientName" placeholder="Correo">
+                        <input type="text" class="form-control" id="registerClient" name="clientName" placeholder="Correo">
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Correo</label>
@@ -55,13 +55,17 @@
                 </form>
                 <div id="registerMessageArea" style="display: none;"></div>
                 <!-- You dont have an account button -->
-                <div class="text-center">
-                    <p>¿Ya tienes una cuenta? <a href="./login.html">Inicia Sesión</a></p>
-                </div>
+                <center>
+                    <div class="text-center">
+                        <p>¿Ya tienes una cuenta? <a href="./login.html">Inicia Sesión</a></p>
+                    </div>
+                </center>
             </div>
 
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="./JS/auth.js"></script>
     </body>
 </html>
