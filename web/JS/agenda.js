@@ -18,6 +18,15 @@ scheduleBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(petName)) {
+        swal({
+            title: 'Error',
+            text: 'El nombre de la mascota no puede contener caracteres especiales.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
 
     if (!appointmentDate) {
         swal({
@@ -47,6 +56,28 @@ scheduleBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(appointmentNotes)) {
+        swal({
+            title: 'Error',
+            text: 'La razón de la cita no puede contener caracteres especiales.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
 
     form.submit();
 });
+
+function isSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9]+$/.test(sanitizedInput);
+}
+function emailisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9@.]+$/.test(sanitizedInput);
+}
+function passemaisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9!@#$%^&*()_+]+$/.test(sanitizedInput);   
+}

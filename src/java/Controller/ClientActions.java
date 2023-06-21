@@ -51,21 +51,25 @@ public class ClientActions {
         int status = 0;
         try {
             Connection con = DatabaseConnection.getConnection();
+            System.out.println("conectado en controller");
             String registerClientQuery = "INSERT INTO Clients(clientName, clientEmail, clientPass)"
                     + " VALUES (?, ?, ?)";
-
+            System.out.println("antes del ps");
+            System.out.println("client name: " + cli.getClientName());
+            System.out.println("connection: " + con);
             PreparedStatement ps = con.prepareStatement(registerClientQuery);
-
+            System.out.println("despues del ps");
             ps.setString(1, cli.getClientName());
             ps.setString(2, cli.getClientEmail());
             ps.setString(3, cli.getClientPass());
-
+            System.out.println("Antes del update");
             status = ps.executeUpdate();
-
+            System.out.println("despues del update");
             con.close();
+            System.out.println("despues del close");
 
         } catch (Exception err) {
-            System.out.println("Error creating client: " + err.getMessage());
+            System.out.println("Error creating client: " + err);
         }
         return status;
     }
@@ -103,7 +107,13 @@ public class ClientActions {
             ps.setInt(1, clientId);
 
             status = ps.executeUpdate();
+            ps.close();
+            String deleteHisPetQuery = "DELETE FROM Pets WHERE clientId = ?";
 
+            PreparedStatement prepared = con.prepareStatement(deleteHisPetQuery);
+            prepared.setInt(1, clientId);
+            int useless = prepared.executeUpdate();
+            prepared.close();
             con.close();
 
         } catch (Exception err) {

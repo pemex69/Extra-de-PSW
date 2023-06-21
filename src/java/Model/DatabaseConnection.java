@@ -21,8 +21,13 @@ public class DatabaseConnection {
         Connection con = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(url, userName, password);
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://aws.connect.psdb.cloud/veterinaria?sslMode=VERIFY_IDENTITY",
+                    "6hr8nng41i9wdv9h3nxf",
+                    "pscale_pw_8LAjKjIRFca2fTO1ckj3a9mkMFNC8pnnZK4WA83Eipk");
             System.out.println("DB connected . . .");
+            return conn;
+
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error while trying to connect to DB: " + e.getMessage());
         }

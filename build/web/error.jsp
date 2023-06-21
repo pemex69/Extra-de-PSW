@@ -8,7 +8,7 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Valió riata</title>
+            <title>EERROR</title>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
                 integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
                 crossorigin="anonymous">
@@ -16,11 +16,10 @@
 
         <body>
             <div class="container">
-                <h1>ERROR. <a href="./index.html"><strong>Regresa</strong></a></h1>
-                <h6>Ojalá no salga esto el 19 de Mayo a las 13:30 .</h6>
+                <h1>Sitio en construccion. <a href="./index.html"><strong>volver</strong></a></h1>
+                <h6>si.</h6>
                 <br>
-                <img src="https://media.tenor.com/R1KctPuHA8sAAAAd/miedo-perro.gif">
-            </div>
+           </div>
         </body>
 
         </html>

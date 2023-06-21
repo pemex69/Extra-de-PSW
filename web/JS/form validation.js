@@ -49,3 +49,16 @@ document.getElementById('clients').addEventListener('submit', function (event) {
     }
     event.target.submit();
 });
+
+function isSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9]+$/.test(sanitizedInput);
+}
+function emailisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9@.]+$/.test(sanitizedInput);
+}
+function passemaisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9!@#$%^&*()_+]+$/.test(sanitizedInput);   
+}

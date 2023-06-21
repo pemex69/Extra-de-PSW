@@ -17,11 +17,29 @@ submitBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(studyName)) {
+        swal({
+            title: 'Error',
+            text: 'El nombre del estudio solo puede contener letras y números.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
 
     if (!studyReason) {
         swal({
             title: 'Error',
             text: 'Ingresa la razón por la que se solicita el estudio.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
+    if (!isSafeInput(studyReason)) {
+        swal({
+            title: 'Error',
+            text: 'La razón por la que se solicita el estudio solo puede contener letras y números.',
             icon: 'error',
             button: 'Aceptar',
         });
@@ -47,11 +65,30 @@ submitBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(studyName)) {
+        swal({
+            title: 'Error',
+            text: 'El nombre del estudio solo puede contener letras y números.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
+
 
     if (!precautionTreatment) {
         swal({
             title: 'Error',
             text: 'Ingresa el tratamiento mientras tanto.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
+    if (!isSafeInput(precautionTreatment)) {
+        swal({
+            title: 'Error',
+            text: 'El tratamiento mientras tanto solo puede contener letras y números.',
             icon: 'error',
             button: 'Aceptar',
         });
@@ -70,3 +107,16 @@ submitBtn.addEventListener('click', function (event) {
 
     form.submit();
 });
+
+function isSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9]+$/.test(sanitizedInput);
+}
+function emailisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9@.]+$/.test(sanitizedInput);
+}
+function passemaisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9!@#$%^&*()_+]+$/.test(sanitizedInput);   
+}

@@ -44,7 +44,11 @@
         <br><br><br><br>
         <main>
             <div class="container">
-                <% String clientName = (String) session.getAttribute("clientName"); %>
+                <% String clientName = (String) session.getAttribute("clientName");
+                if (clientName == null) {
+                    clientName = "No tienes una sesion activa";
+                    }
+                %>
 
                 <h2>La mascota se registrara a nombre de: <strong><%=clientName%></strong></h2>
                 <br>

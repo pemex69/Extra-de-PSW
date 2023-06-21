@@ -19,11 +19,29 @@ submitBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(petId)) {
+        swal({
+            title: 'Error',
+            text: 'El ID de la mascota solo puede contener letras y números.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
 
     if (!vetId) {
         swal({
             title: 'Error',
             text: 'Selecciona un veterinario válido.',
+            icon: 'error',
+            button: 'Aceptar',
+        });
+        return;
+    }
+    if (!isSafeInput(vetId)) {
+        swal({
+            title: 'Error',
+            text: 'El ID del veterinario solo puede contener letras y números.',
             icon: 'error',
             button: 'Aceptar',
         });
@@ -49,6 +67,16 @@ submitBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(consultationNotes)) {
+        swal({
+            title: 'Error',
+            text: 'Las notas de la consulta solo pueden contener letras y números.',
+            icon: 'error',
+            button: 'Aceptar',
+
+        });
+        return;
+    }
 
     if (consultationNotes.length > 255 || consultationNotes.length < 10) {
         swal({
@@ -69,6 +97,16 @@ submitBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(consultationTreatment)) {
+        swal({
+            title: 'Error',
+            text: 'El tratamiento de la consulta solo puede contener letras y números.',
+            icon: 'error',
+            button: 'Aceptar',
+
+        });
+        return;
+    }
 
     if (consultationTreatment.length > 255 || consultationTreatment.length < 10) {
         swal({
@@ -82,3 +120,15 @@ submitBtn.addEventListener('click', function (event) {
 
     form.submit();
 });
+function isSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9]+$/.test(sanitizedInput);
+}
+function emailisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9@.]+$/.test(sanitizedInput);
+}
+function passemaisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9!@#$%^&*()_+]+$/.test(sanitizedInput);
+}

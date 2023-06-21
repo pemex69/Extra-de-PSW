@@ -1,0 +1,633 @@
+20-Jun-2023 00:12:53.875 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Jun-2023 00:12:53.875 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Jun-2023 00:12:53.877 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@68dcfd52')
+20-Jun-2023 00:47:33.560 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Jun-2023 00:47:33.560 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Jun-2023 00:53:35.896 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Jun-2023 00:53:35.897 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Jun-2023 00:53:35.898 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@76d05cc9')
+20-Jun-2023 02:51:04.368 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Jun-2023 02:51:04.368 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Jun-2023 03:03:36.755 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Jun-2023 03:03:36.755 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Jun-2023 03:03:36.756 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3b9d6699')
+20-Jun-2023 03:18:53.586 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Jun-2023 03:18:53.586 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Jun-2023 15:53:30.321 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Jun-2023 15:53:30.321 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Jun-2023 15:53:30.323 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@72b16078')
+20-Jun-2023 16:45:47.279 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [55] in the jsp file: [/getAllUsers.jsp]
+al cannot be resolved to a variable
+52:                     </tr>
+53:                 </thead>
+54:                 <tbody>
+55:                     <% for (Client cli : al) { %>
+56:                     <tr>
+57:                         <td><%= cli.getClientId() %></td>
+58:                         <td><%= cli.getClientName() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [55] in the jsp file: [/getAllUsers.jsp]
+al cannot be resolved to a variable
+52:                     </tr>
+53:                 </thead>
+54:                 <tbody>
+55:                     <% for (Client cli : al) { %>
+56:                     <tr>
+57:                         <td><%= cli.getClientId() %></td>
+58:                         <td><%= cli.getClientName() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+20-Jun-2023 16:48:04.297 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [55] in the jsp file: [/getAllUsers.jsp]
+al cannot be resolved to a variable
+52:                     </tr>
+53:                 </thead>
+54:                 <tbody>
+55:                     <% for (Client cli : al) { %>
+56:                     <tr>
+57:                         <td><%= cli.getClientId() %></td>
+58:                         <td><%= cli.getClientName() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [55] in the jsp file: [/getAllUsers.jsp]
+al cannot be resolved to a variable
+52:                     </tr>
+53:                 </thead>
+54:                 <tbody>
+55:                     <% for (Client cli : al) { %>
+56:                     <tr>
+57:                         <td><%= cli.getClientId() %></td>
+58:                         <td><%= cli.getClientName() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+20-Jun-2023 16:55:04.241 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [55] in the jsp file: [/getAllUsers.jsp]
+al cannot be resolved to a variable
+52:                     </tr>
+53:                 </thead>
+54:                 <tbody>
+55:                     <% for (Client cli : al) { %>
+56:                     <tr>
+57:                         <td><%= cli.getClientId() %></td>
+58:                         <td><%= cli.getClientName() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [55] in the jsp file: [/getAllUsers.jsp]
+al cannot be resolved to a variable
+52:                     </tr>
+53:                 </thead>
+54:                 <tbody>
+55:                     <% for (Client cli : al) { %>
+56:                     <tr>
+57:                         <td><%= cli.getClientId() %></td>
+58:                         <td><%= cli.getClientName() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+20-Jun-2023 17:37:39.262 SEVERE [http-nio-8080-exec-71] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/getAllUsers.jsp]
+Duplicate local variable client
+65:                         for (Client client : clientsList) {
+66:                     %>
+67:                     <%
+68:                     for (Client client : clientsList) {
+69:                     %>
+70:                     <tr>
+71:                         <td><%= client.getClientId() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/getAllUsers.jsp]
+Duplicate local variable client
+65:                         for (Client client : clientsList) {
+66:                     %>
+67:                     <%
+68:                     for (Client client : clientsList) {
+69:                     %>
+70:                     <tr>
+71:                         <td><%= client.getClientId() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+20-Jun-2023 17:37:45.110 SEVERE [http-nio-8080-exec-62] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/getAllUsers.jsp]
+Duplicate local variable client
+65:                         for (Client client : clientsList) {
+66:                     %>
+67:                     <%
+68:                     for (Client client : clientsList) {
+69:                     %>
+70:                     <tr>
+71:                         <td><%= client.getClientId() %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/getAllUsers.jsp]
+Duplicate local variable client
+65:                         for (Client client : clientsList) {
+66:                     %>
+67:                     <%
+68:                     for (Client client : clientsList) {
+69:                     %>
+70:                     <tr>
+71:                         <td><%= client.getClientId() %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+20-Jun-2023 17:38:12.487 SEVERE [http-nio-8080-exec-62] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/getAllUsers.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+77:                     %>
+78: 
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+
+
+An error occurred at line: [82] in the jsp file: [/getAllUsers.jsp]
+conn cannot be resolved
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+84:                         e.printStackTrace();
+85:                     }
+
+
+An error occurred at line: [239] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [244] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [245] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [247] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [254] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/getAllUsers.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+77:                     %>
+78: 
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+
+
+An error occurred at line: [82] in the jsp file: [/getAllUsers.jsp]
+conn cannot be resolved
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+84:                         e.printStackTrace();
+85:                     }
+
+
+An error occurred at line: [239] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [244] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [245] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [247] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [254] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+20-Jun-2023 17:38:20.996 SEVERE [http-nio-8080-exec-70] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/getAllUsers.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+77:                     %>
+78: 
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+
+
+An error occurred at line: [82] in the jsp file: [/getAllUsers.jsp]
+conn cannot be resolved
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+84:                         e.printStackTrace();
+85:                     }
+
+
+An error occurred at line: [239] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [244] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [245] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [247] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [254] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/getAllUsers.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+77:                     %>
+78: 
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+
+
+An error occurred at line: [82] in the jsp file: [/getAllUsers.jsp]
+conn cannot be resolved
+79:                     <% 
+80:                         }
+81:                     
+82:                         conn.close(); // Close the database connection
+83:                     } catch (SQLException e) {
+84:                         e.printStackTrace();
+85:                     }
+
+
+An error occurred at line: [239] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [241] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [242] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [244] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [245] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [247] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [254] in the generated java file: [/home/que/Downloads/sus/EXTRA PSW/VeterinariaExtraordinaria/apache-tomcat-10.1.10/work/Catalina/localhost/VeterinariaExtraordinaria/org/apache/jsp/getAllUsers_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)

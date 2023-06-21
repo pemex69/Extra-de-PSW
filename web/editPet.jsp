@@ -38,7 +38,7 @@
                 Pet pet = PetActions.getPetById(petId);
             %>
 
-            <form action="PetServlet?action=update" method="post">
+            <form action="PetServlet?action=update" method="post" id="forum">
                 <input type="hidden" name="petId" value="<%= pet.getPetId() %>">
                 <input type="hidden" name="clientId" value="<%= pet.getClientId() %>">
                 <div class="form-group">
@@ -67,6 +67,6 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="./JS/pets.js"></script>
+        <script src="./JS/other pets.js"></script>
     </body>
 </html>

@@ -1,0 +1,929 @@
+15-Jun-2023 14:51:11.212 SEVERE [http-nio-8080-exec-403] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [34] in the jsp file: [/getAllUsers.jsp]
+The method getAllClients(int) in the type ClientActions is not applicable for the arguments ()
+31:             </thead>
+32:             <tbody>
+33:                 <%
+34:                     ArrayList<Client> al = ClientActions.getAllClients();
+35:                     for (Client cli : al) {
+36:                 %>
+37:                 <tr>
+
+
+An error occurred at line: [38] in the jsp file: [/getAllUsers.jsp]
+getClientId cannot be resolved or is not a field
+35:                     for (Client cli : al) {
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId%></td>
+39:                 </tr>
+40:                 <%
+41:                     }
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [34] in the jsp file: [/getAllUsers.jsp]
+The method getAllClients(int) in the type ClientActions is not applicable for the arguments ()
+31:             </thead>
+32:             <tbody>
+33:                 <%
+34:                     ArrayList<Client> al = ClientActions.getAllClients();
+35:                     for (Client cli : al) {
+36:                 %>
+37:                 <tr>
+
+
+An error occurred at line: [38] in the jsp file: [/getAllUsers.jsp]
+getClientId cannot be resolved or is not a field
+35:                     for (Client cli : al) {
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId%></td>
+39:                 </tr>
+40:                 <%
+41:                     }
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 14:53:36.003 SEVERE [http-nio-8080-exec-407] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 14:53:40.017 SEVERE [http-nio-8080-exec-403] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 14:53:44.447 SEVERE [http-nio-8080-exec-407] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 14:53:48.541 SEVERE [http-nio-8080-exec-405] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 14:54:00.017 SEVERE [http-nio-8080-exec-408] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [39] in the jsp file: [/getAllUsers.jsp]
+getClientName cannot be resolved or is not a field
+36:                 %>
+37:                 <tr>
+38:                     <td><%=cli.getClientId()%></td>
+39:                     <td><%=cli.getClientName%></td>
+40:                     <td><%=cli.getClientEmail()%></td>
+41:                     <td><%=cli.getClientPass()%></td>
+42:                 </tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 15:25:08.860 SEVERE [http-nio-8080-exec-413] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientName" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientName" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPass"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientName" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientName" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmail" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPass"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 15:34:19.744 SEVERE [http-nio-8080-exec-419] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientIdUPD" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientNameUPD" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmailUPD" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPassUPD"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientIdUPD" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientNameUPD" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmailUPD" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPassUPD"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 16:48:45.420 SEVERE [http-nio-8080-exec-444] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientIdUPD" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientNameUPD" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmailUPD" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPassUPD"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientIdUPD" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientNameUPD" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmailUPD" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPassUPD"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 16:48:47.391 SEVERE [http-nio-8080-exec-437] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [org.apache.jasper.JasperException: java.lang.ClassNotFoundException: org.apache.jsp.updateClient_jsp] with root cause
+	java.lang.ClassNotFoundException: org.apache.jsp.updateClient_jsp
+		at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:129)
+		at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:58)
+		at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:150)
+		at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:189)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:410)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+15-Jun-2023 16:48:51.646 SEVERE [http-nio-8080-exec-439] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/VeterinariaExtraordinaria] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientIdUPD" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientNameUPD" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmailUPD" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPassUPD"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [32] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+29:                 %>
+30:                 <div class="form-group">
+31:                     <label for="clientName">ID</label>
+32:                     <input value="<%cli.getClientId()%>" type="hidden" class="form-control" id="clientId" name="clientIdUPD" placeholder="Nombre">
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+
+
+An error occurred at line: [36] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+33:                 </div>
+34:                 <div class="form-group">
+35:                     <label for="clientName">Nombre</label>
+36:                     <input value="<%cli.getClientName()%>" type="text" class="form-control" id="clientName" name="clientNameUPD" placeholder="Nombre">
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+
+
+An error occurred at line: [40] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+37:                 </div>
+38:                 <div class="form-group">
+39:                     <label for="clientEmail">Correo</label>
+40:                     <input value="<%cli.getClientEmail()%>" type="email" class="form-control" id="clientEmail" name="clientEmailUPD" placeholder="Correo">
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+
+
+An error occurred at line: [44] in the jsp file: [/updateClient.jsp]
+Syntax error, insert ";" to complete Statement
+41:                 </div>
+42:                 <div class="form-group">
+43:                     <label for="clientPass">Contrasenia</label>
+44:                     <input value="<%cli.getClientPass()%>" type="password" class="form-control" id="clientPass" name="clientPassUPD"
+45:                            placeholder="Contrasenia">
+46:                 </div>
+47:                 <input type="submit" value="Actualizar"> <input type="reset" value="Limpiar">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)

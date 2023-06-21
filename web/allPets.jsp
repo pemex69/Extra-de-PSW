@@ -69,7 +69,7 @@
             </table>
 
             <h2 class="mt-4 mb-4">Agregar mascota</h2>
-            <form action="PetServlet?action=add" method="post">
+            <form action="PetServlet?action=add" method="post" id="forum">
                 <input type="hidden" name="clientId" value="<%= clientId %>">
                 <div class="form-group">
                     <label>Nombre</label>
@@ -97,6 +97,6 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="./JS/pets.js"></script>
+        <script src="./JS/other pets.js"></script>
     </body>
 </html>

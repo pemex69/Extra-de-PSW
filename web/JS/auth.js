@@ -18,12 +18,31 @@ postUserBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!isSafeInput(username)) {
+        swal({
+            title: 'Error',
+            text: 'El nombre de usuario no puede contener caracteres especiales.',
+            icon: 'error',
+            button: 'Nimodo',
+        });
+        return;
+    }
 
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(email)) {
         swal({
             title: 'Error',
             text: 'El email no es válido.',
+            icon: 'error',
+            button: 'Nimodo',
+        });
+        return;
+    }
+
+    if (!emailisSafeInput(email)) {
+        swal({
+            title: 'Error',
+            text: 'El email no puede contener caracteres especiales.',
             icon: 'error',
             button: 'Nimodo',
         });
@@ -39,7 +58,29 @@ postUserBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!passemaisSafeInput(password)) {
+        swal({
+            title: 'Error',
+            text: 'La contraseña no puede contener ciertos caracteres especiales.',
+            icon: 'error',
+            button: 'Nimodo',
+        });
+        return;
+    }
 
 
     form.submit();
 });
+
+function isSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9]+$/.test(sanitizedInput);
+}
+function emailisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9@.]+$/.test(sanitizedInput);
+}
+function passemaisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9!@#$%^&*()_+]+$/.test(sanitizedInput);   
+}

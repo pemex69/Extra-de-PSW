@@ -1,0 +1,76 @@
+14-Jun-2023 19:24:32.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.10
+14-Jun-2023 19:24:32.918 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2023 18:11:59 UTC
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.10.0
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.0-73-generic
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.19+7-post-Ubuntu-0ubuntu120.04.1
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+14-Jun-2023 19:24:32.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/que/Downloads/sus/apache-tomcat-10.1.10
+14-Jun-2023 19:24:32.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/que/Downloads/sus/apache-tomcat-10.1.10
+14-Jun-2023 19:24:32.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/que/Downloads/sus/apache-tomcat-10.1.10/conf/logging.properties
+14-Jun-2023 19:24:32.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|OMEN-que
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+14-Jun-2023 19:24:32.930 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+14-Jun-2023 19:24:32.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/que/Downloads/sus/apache-tomcat-10.1.10
+14-Jun-2023 19:24:32.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/que/Downloads/sus/apache-tomcat-10.1.10
+14-Jun-2023 19:24:32.931 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/que/Downloads/sus/apache-tomcat-10.1.10/temp
+14-Jun-2023 19:24:32.941 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+14-Jun-2023 19:24:33.213 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+14-Jun-2023 19:24:33.394 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [698] milliseconds
+14-Jun-2023 19:24:33.464 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+14-Jun-2023 19:24:33.464 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.10]
+14-Jun-2023 19:24:33.476 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/host-manager]
+14-Jun-2023 19:24:33.741 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/host-manager] has finished in [265] ms
+14-Jun-2023 19:24:33.742 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/manager]
+14-Jun-2023 19:24:33.768 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/manager] has finished in [27] ms
+14-Jun-2023 19:24:33.769 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/examples]
+14-Jun-2023 19:24:33.984 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/examples] has finished in [215] ms
+14-Jun-2023 19:24:33.984 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/ROOT]
+14-Jun-2023 19:24:33.997 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/ROOT] has finished in [13] ms
+14-Jun-2023 19:24:33.997 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/docs]
+14-Jun-2023 19:24:34.018 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/que/Downloads/sus/apache-tomcat-10.1.10/webapps/docs] has finished in [21] ms
+14-Jun-2023 19:24:34.022 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+14-Jun-2023 19:24:34.051 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [656] milliseconds
+14-Jun-2023 19:24:43.969 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/home/que/Downloads/sus/apache-tomcat-10.1.10/conf/Catalina/localhost/VeterinariaExtraordinaria.xml]
+14-Jun-2023 19:24:43.971 WARNING [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/VeterinariaExtraordinaria] in deployment descriptor [/home/que/Downloads/sus/apache-tomcat-10.1.10/conf/Catalina/localhost/VeterinariaExtraordinaria.xml] has been ignored
+14-Jun-2023 19:24:43.997 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/home/que/Downloads/sus/apache-tomcat-10.1.10/conf/Catalina/localhost/VeterinariaExtraordinaria.xml] has finished in [28] ms
+14-Jun-2023 19:24:44.005 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/VeterinariaExtraordinaria]] after start() had already been called. The second call will be ignored.
+14-Jun-2023 20:39:22.270 INFO [http-nio-8080-exec-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:39:23.032 INFO [http-nio-8080-exec-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:39:23.802 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:39:23.852 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:41:21.308 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:41:21.338 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:42:13.439 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:42:13.463 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:42:51.910 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:42:51.935 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:42:53.038 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:42:53.076 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:46:51.315 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:46:51.367 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:47:24.299 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:47:24.328 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:47:25.280 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:47:25.310 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:50:51.755 INFO [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:50:51.791 INFO [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:50:57.126 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:50:57.165 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 20:50:59.857 INFO [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 20:50:59.885 INFO [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 21:06:09.791 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 21:06:09.833 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 23:44:22.432 INFO [http-nio-8080-exec-43] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 23:44:24.194 INFO [http-nio-8080-exec-43] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed
+14-Jun-2023 23:53:18.318 INFO [http-nio-8080-exec-52] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] has started
+14-Jun-2023 23:53:19.386 INFO [http-nio-8080-exec-52] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/VeterinariaExtraordinaria] is completed

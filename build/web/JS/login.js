@@ -28,6 +28,17 @@ loginBtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!passemaisSafeInput(password)) {
+        swal({
+            title: 'Error',
+            text: 'La contraseña solo puede contener letras, números y los siguientes caracteres: !@#$%^&*()_+',
+            icon: 'error',
+            button: 'Aceptar',
+
+        });
+        return;
+    }
+
 
     loginForm.submit();
 });
@@ -61,6 +72,29 @@ vetloginbtn.addEventListener('click', function (event) {
         });
         return;
     }
+    if (!passemaisSafeInput(password)) {
+        swal({
+            title: 'Error',
+            text: 'La contraseña solo puede contener letras, números y los siguientes caracteres: !@#$%^&*()_+',
+            icon: 'error',
+            button: 'Aceptar',
+
+        });
+        return;
+    }
 
     vetLoginForm.submit();
 });
+
+function isSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9]+$/.test(sanitizedInput);
+}
+function emailisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9@.]+$/.test(sanitizedInput);
+}
+function passemaisSafeInput(input) {
+    let sanitizedInput = input.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return /^[a-zA-Z0-9!@#$%^&*()_+]+$/.test(sanitizedInput);
+}
